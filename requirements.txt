@@ -1,0 +1,36 @@
+# Core
+torch
+torchvision
+numpy
+scipy
+scikit-learn
+tqdm
+matplotlib
+pandas
+Pillow
+
+# Normalizing flows (MAF density estimator for MNIST)
+nflows
+
+# Baselines: Deep Ensembles and MC Dropout
+torch-uncertainty==0.11.0
+lightning==2.6.1
+
+# Posterior Network (normalizing flows)
+pyro-ppl
+
+# R-EDL bundled dependency
+wandb
+
+# LAMOST spectral data (FITS files)
+astropy
+h5py
+tables
+
+# Note: the following external repositories are bundled directly in this repo
+# and do not need to be installed separately:
+#   DAEDL/             (modified from original)
+#   ICLR2024-REDL/
+#   Re-EDL/
+#   Posterior-Network/ (modified from original)
+#   LAMOST-Spectra-Classifier/

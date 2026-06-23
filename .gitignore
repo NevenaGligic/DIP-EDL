@@ -1,0 +1,54 @@
+# Model weights
+saved_model_weights/
+Posterior-Network/saved_models/
+*.pth
+*.pt
+
+# Results
+*.jsonl
+crash_log.txt
+
+# Downloaded datasets
+data/
+CIFAR10/
+MNIST/
+
+# Virtual environments
+venv/
+.venv/
+env/
+myenv/
+.env/
+
+# Generated outputs
+figures/
+tables/
+*.png
+*.pdf
+*.csv
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# SLURM / HPC
+slurm/
+logs/
+*.slurm
+*.sh
+*.out
+*.err
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp
