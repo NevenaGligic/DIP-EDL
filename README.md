@@ -4,6 +4,8 @@
 
 \* Equal contribution
 
+TEST
+
 *STAI-X 2026 (Full Paper Track)*
 
 > Evidential Deep Learning (EDL) is a popular framework for uncertainty-aware classification that models predictive uncertainty via Dirichlet distributions parameterized by neural networks. Despite its popularity, its theoretical foundations and behavior under distributional shift remain poorly understood. In this work, we provide a principled statistical interpretation by proving that EDL training corresponds to amortized variational inference in a hierarchical Bayesian model with a tempered pseudo-likelihood. This perspective reveals a major drawback: standard EDL conflates epistemic and aleatoric uncertainty, leading to systematic overconfidence on out-of-distribution inputs. To address this, we introduce Density-Informed Pseudo-count EDL, a new parametrization that decouples class prediction from uncertainty quantification by separately estimating the conditional label distribution and the marginal covariate density. This separation preserves evidence in high-density regions while shrinking predictions toward a uniform prior for out-of-distribution data. Theoretically, we prove that our method achieves asymptotic concentration. Empirically, we show our method enhances interpretability and improves robustness and uncertainty calibration under distributional shift.
