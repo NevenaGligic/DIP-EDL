@@ -106,7 +106,7 @@ Results saved to `results/`.
 
 ### Density corruption ablation
 
-Effect of corrupting p(x) with Gaussian noise:
+Effect of corrupting the covariates with Gaussian noise:
 
 ```bash
 python density_corruption_ablation.py --dataset mnist  --seed 10
