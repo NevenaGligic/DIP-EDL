@@ -12,24 +12,6 @@ Paper: https://arxiv.org/abs/2602.01477
 
 ---
 
-## Method
-
-DIP-EDL parameterises the Dirichlet concentration as:
-
-```
-alpha = 1 + N * gamma * p(x) * P(y|x)
-```
-
-where N is the training set size, gamma is a scaling factor, p(x) is estimated by a density model, and P(y|x) is the softmax classifier output.
-
-| Dataset  | Backbone                        | Density estimator |
-|----------|---------------------------------|-------------------|
-| MNIST    | StandardCNN (ResNet-18 adapted) | MAF (pixel space) |
-| CIFAR-10 | WideResNet-28-10                | GDA (feature space) |
-| LAMOST   | Conv1d multi-branch             | GDA (feature space) |
-
----
-
 ## Installation
 
 ```bash
@@ -95,7 +77,7 @@ Weights are saved to `saved_model_weights/` by default. Pass `--train_cnn`, `--t
 
 ### Component ablation (Table in paper)
 
-Evaluates which combination of N, p(x), P(y|x) drives performance:
+Evaluates individual and pairwise contributions of training set size, the density estimator, and the discriminative classifier:
 
 ```bash
 # MNIST (omit --train_cnn --train_maf if weights are already in saved_model_weights/)
@@ -120,11 +102,7 @@ python gamma_ablation.py --dataset mnist  --seed 10
 python gamma_ablation.py --dataset cifar10 --seed 10
 ```
 
-Results saved to `results/`. Print LaTeX tables:
-
-```bash
-python analyze_ablations.py
-```
+Results saved to `results/`.
 
 ### Density corruption ablation
 
@@ -133,6 +111,14 @@ Effect of corrupting p(x) with Gaussian noise:
 ```bash
 python density_corruption_ablation.py --dataset mnist  --seed 10
 python density_corruption_ablation.py --dataset cifar10 --seed 10
+```
+
+Results saved to `results/`.
+
+Print LaTeX tables:
+
+```bash
+python analyze_ablations.py
 ```
 
 ### Toy experiments
